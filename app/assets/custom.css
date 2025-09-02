@@ -1,0 +1,37 @@
+main{
+    flex: 1 1 auto;
+}
+.filters-items{
+    width: 133.56px;
+    height: 38px;
+    font-weight: 400;
+    font-size: 16px;
+    leading-trim: NONE;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 100%, 20px 100%);
+
+}
+
+.filters-items {
+    position: relative;
+    color: white;
+    background: none;
+    font-family: sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    clip-path: polygon(
+            100% 0%,      /* top right */
+            100% 54%,     /* right slant */
+            89.5% 100%,   /* bottom right */
+            0.7% 100%,    /* bottom left */
+            0.7% 46%,     /* left slant */
+            10.9% 0%      /* top left */
+    );
+    border: 1px solid #FFFFFF;
+}
+.options-card{
+    
+}
