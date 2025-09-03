@@ -20,5 +20,13 @@ export default defineNuxtConfig({
             apiBase: 'http://127.0.0.1:8000', // Symfony URL
         }
     },
-
+    nitro: {
+        preset: 'github-pages'
+    },
+    app: {
+        baseURL: process.env.NUXT_APP_BASE_URL || '/',
+    },
+    routeRules: {
+        '/**': { prerender: true },
+    }
 })
