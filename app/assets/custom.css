@@ -6,9 +6,9 @@ main{
     height: 38px;
     font-weight: 400;
     font-size: 16px;
-    leading-trim: NONE;
+    leading-trim: normal;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
     text-align: center;
     clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 100%, 20px 100%);
 
@@ -32,6 +32,45 @@ main{
     );
     border: 1px solid #FFFFFF;
 }
-.options-card{
-    
+/*.options-card{*/
+
+.options-card {
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: #171717; /* same as bg-neutral-900 */
+    --cut: 24px; /* size of the cut */
+    /* Make the bottom-right corner transparent by clipping a diagonal wedge */
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        100% calc(100% - var(--cut)),
+        calc(100% - var(--cut)) 100%,
+        0 100%
+    );
+}
+
+.options-card::after {
+    /* Draw a subtle 1px diagonal border along the clipped cut without filling it */
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: var(--cut);
+    height: var(--cut);
+
+    background: linear-gradient(
+      225deg,
+      transparent calc(50% - 0.5px),
+      rgba(255, 255, 255, 0) calc(50% - 0.5px),
+      rgba(255, 255, 255, 0) calc(50% + 0.5px),
+      transparent calc(50% + 0.5px)
+    );
+    pointer-events: none;
+}
+
+.bg-teal-custom{
+ background-color: #1E99AA;
+}
+.text-teal-custom{
+    color: #267778;
 }

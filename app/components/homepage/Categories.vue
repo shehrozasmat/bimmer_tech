@@ -1,10 +1,10 @@
 <template>
-  <div class="flex">
+  <div class="inline">
     <button
         v-for="category in categories"
         :key="category"
         type="button"
-        class="relative flex items-center justify-center w-[119.43px] h-[38px] mr-2 text-white"
+        class="relative items-center justify-center w-[119.43px] h-[38px] mr-2 text-white shrink-0"
         :class="category === selected ? 'is-active' : ''"
         @click="$emit('select', category === selected ? null : category)"
     >

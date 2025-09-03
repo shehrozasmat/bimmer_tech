@@ -21,7 +21,11 @@
           />
         </svg>
 
+        <span class="relative z-10 text-sm font-medium"
+              :class="type === selected ? 'text-black' : ''"
+        >
         {{ type }}
+          </span>
       </button>
   </div>
 </template>
