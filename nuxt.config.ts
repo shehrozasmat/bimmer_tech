@@ -1,7 +1,8 @@
 export default defineNuxtConfig({
     srcDir: 'app/',
     compatibilityDate: '2025-09-02',
-    ssr: true,
+    ssr: false,
+    target: 'static',
     modules: [
         '@nuxtjs/google-fonts',
         '@nuxtjs/tailwindcss'
